@@ -96,21 +96,21 @@ export const contentTypes = [
 export const featureBenefits = [
   {
     featureTitle: "Effortless Automation",
-    description: "Let AI do the heavy lifting, so you can focus on what matters - creating exceptional content.",
-    imageUrl: conversions, // Replace with an appropriate image URL
+    description: "Copy an existing content and type the social media platform you would like to tailor your content into.",
+    imageUrl: conversions, 
     altText: "Automation Image",
   },
   {
     title: "Multi-Platform Mastery",
-    description: "Conquer LinkedIn, Twitter, IG, TikTok, and YouTube with tailored content for each platform.",
-    imageUrl: conversions, // Replace with an appropriate image URL
+    description: "Copy the newly generated text and upload to your favorite social media platform! Conquer LinkedIn, Twitter, IG, TikTok, and YouTube algorithm with tailored content for each platform.",
+    imageUrl: conversions, 
     altText: "Multi-Platform Image",
     orderLast: true, // To display the image on the right side
   },
   {
     title: "Web 5 Magic",
-    description: "Our integration ensures a smooth onboarding experience and secure access to your content.",
-    imageUrl: conversions, // Replace with an appropriate image URL
+    description: "No need to sign up! Our integration ensures a smooth onboarding experience and secure access to all your previously generated content.",
+    imageUrl: conversions, 
     altText: "Web 5 Magic Image",
   },
 ];

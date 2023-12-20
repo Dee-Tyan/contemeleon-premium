@@ -13,7 +13,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="dark:bg-gray-900 text-white">
+    <section className="dark:bg-gray-900 text-white font-space-mono">
       <div className="container mx-auto max-w-4xl px-6 py-10">
         <h1 className="text-center text-4xl font-semibold text-white">Frequently asked questions</h1>
 

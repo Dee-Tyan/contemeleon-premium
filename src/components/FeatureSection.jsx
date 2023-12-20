@@ -25,7 +25,7 @@ const FeatureSection = ({
               alt={altText}
             />
           </div>
-          <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16">
+          <div className="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-12 sm:pl-4">
             <p className="mb-2 text-sm font-semibold leading-none text-left uppercase">
               {featureTitle}
             </p>
