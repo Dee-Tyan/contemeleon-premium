@@ -50,7 +50,7 @@ export const MobileNav = () => {
 
 export const DesktopNav = () => {
   return (
-    <ul className="hidden space-x-6 md:flex gap-4 py-4 md:items-center">
+    <ul className="hidden space-x-6 md:flex gap-4 py-6 md:items-center">
       {navData.map((item) => {
         {
           return item.key === "create" ? (

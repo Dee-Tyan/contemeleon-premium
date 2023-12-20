@@ -48,7 +48,7 @@ export const platforms = [
     icon: linkedin,
   },
   {
-    name: "Tweet",
+    name: "Twitter thread",
     value: "twitter",
     icon: twitter,
   },

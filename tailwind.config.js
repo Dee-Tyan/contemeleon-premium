@@ -28,8 +28,20 @@ module.exports = {
         'purple-10': '#8B44FF',
         'pink-10': '#E14597',
         'purple-10': '#752583'
-      }
+      },
+      animation: {
+        slide: "slide 2.5s linear infinite",
+      },
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(100%)",  },
+          "15%": { transform: "translateX(0)"},
+          "30%": { transform: "translateX(0)"},
+          "45%": { transform: "translateX(-100%)"},
+          "100%": { transform: "translateX(-100%)" },
+        }
+      }, 
     },
   },
   plugins: [],
-}
+};

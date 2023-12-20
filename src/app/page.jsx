@@ -4,6 +4,7 @@ import ActionButton from "@/components/ActionButton";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import logo from "@/assets/logo.png";
+import SocialSlide from "@/components/SocialSlide";
 
 export default function Home() {
   return (
@@ -14,15 +15,14 @@ export default function Home() {
         <div className="w-full lg:w-1/2">
           <div className="grid gap-4">
             <div className="grid">
-              
               <p className="text-4xl lg:text-7xl leading-6 mt-4 font-semibold">
                 Your Content Creation Partner.
               </p>
             </div>
             <div className="leading-7 font-space-mono">
               From Facebook posts to LinkedIn updates, Contemeleon repurposes
-              your existing content into tailored posts for each major social media
-              platform.
+              your existing content into tailored posts for each major social
+              media platform.
             </div>
           </div>
           <div className="flex mt-4">
@@ -30,8 +30,12 @@ export default function Home() {
           </div>
         </div>
         <div className="z-10 hidden md:flex md:flex-end">
-        <Image alt="Create content" loading="lazy" className="" src={logo} />
+          <Image alt="Create content" loading="lazy" className="" src={logo} />
         </div>
+      </section>
+      <section>
+        <SocialSlide />
+        
       </section>
     </main>
   );
