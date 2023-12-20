@@ -5,6 +5,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import logo from "@/assets/logo.png";
 import SocialSlide from "@/components/SocialSlide";
+import FaqSection from "@/components/FaqSection";
 
 export default function Home() {
   return (
@@ -34,8 +35,10 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <SocialSlide />
-        
+        <SocialSlide />   
+      </section>
+      <section>
+        <FaqSection/>
       </section>
     </main>
   );
