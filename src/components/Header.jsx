@@ -5,6 +5,7 @@ import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { navData } from "../data";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
+import ActionButton from "./ActionButton";
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,14 +57,14 @@ export const DesktopNav = () => {
             <Link
               key={item.id}
               href={item.link}
-              className="rounded-md bg-c-pink to-92.36% hover:purple-10 ext-center px-4 h-14 flex items-center justify-center font-space-mono font-bold"
+              className="rounded-md bg-pink-10 hover:bg-purple-10 font-orbitron text-center p-2 flex items-center justify-center font-bold"
             >
               {item.name}
             </Link>
           ) : (
             <div
               key={item.id}
-              className="text-sm hover:text-blue-20 font-space-mono transition cursor-pointer"
+              className="text-sm hover:text-blue-20 font-orbitron transition cursor-pointer"
             >
               <li key={item.name} className="hover:rounded-md">
                 <Link href={item.link}>{item.name}</Link>
@@ -78,18 +79,15 @@ export const DesktopNav = () => {
 
 export const Header = () => {
   return (
-    <nav className="w-full container flex justify-between py-3 lg:p-3 items-center sticky z-[999]">
+    <nav className="flex justify-between py-2 items-center sticky">
       <div className="flex gap-2 justify-center items-center">
-        <Image
-          alt="Create content"
-          loading="lazy"
-          className="w-12"
-          src={logo}
-        />
         <Link href="/">
-          <h1 className="text-3xl font-semibold font-orbitron text-pink hover:text-blue-10 pl-4 md:pl-0">
-            Contemeleon
-          </h1>
+          <Image
+            alt="Create content"
+            loading="lazy"
+            className="w-12"
+            src={logo}
+          />
         </Link>
       </div>
       <DesktopNav />

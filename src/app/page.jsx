@@ -1,31 +1,39 @@
 import Link from "next/link";
 import { Header } from "../components/Header";
 import ActionButton from "@/components/ActionButton";
+import Image from "next/image";
+import Footer from "@/components/Footer";
+import logo from "@/assets/logo.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center bg-black text-gray-10 bg-auto bg-no-repeat bg-right-bottom font-space-mono">
+    <main className="text-gray-10 bg-black px-4 font-obitron lg:px-8">
       <Header />
 
-      <section className="grid gap-8">
-      <div>
-        <div className="grid place-items-center">
-          <p className="flex font-orbitron text-4xl md:text-7xl font-bold ">
-            Conte <span className="text-purple-10">meleon</span>
-          </p>
-          <p className="text-lg lg:text-xl leading-6 mt-4 font-space-mono font-semibold">
-            Your Number 1 Partner in Content Creation.
-          </p>
+      <section className="grid lg:flex lg:justify-between lg:items-center lg:m-8">
+        <div className="w-full lg:w-1/2">
+          <div className="grid gap-4">
+            <div className="grid">
+              <p className="flex font-orbitron text-4xl md:text-7xl font-bold ">
+                Conte <span className="text-pink-10">meleon</span>
+              </p>
+              <p className="text-xl lg:text-2xl leading-6 mt-4 font-semibold">
+                Your Content Creation Partner.
+              </p>
+            </div>
+            <div className="leading-7 font-space-mono">
+              From Facebook posts to LinkedIn updates, Contemeleon repurposes
+              your existing content into tailored posts for each major social media
+              platform.
+            </div>
+          </div>
+          <div className="flex mt-4">
+            <ActionButton />
+          </div>
         </div>
-        <div className="leading-7">
-          From Facebook posts to LinkedIn updates, Contemeleon repurposes your
-          <span className="block">
-            existing content into tailored posts for each major social media
-            platform.
-          </span>
+        <div className="z-10 hidden md:flex md:flex-end">
+        <Image alt="Create content" loading="lazy" className="" src={logo} />
         </div>
-      </div>
-      <ActionButton/>
       </section>
     </main>
   );
