@@ -57,7 +57,7 @@ export const DesktopNav = () => {
             <Link
               key={item.id}
               href={item.link}
-              className="rounded-md bg-pink-10 hover:bg-purple-10 font-orbitron text-center py-2 px-8 flex items-center justify-center font-bold"
+              className="rounded-md bg-pink-10 hover:bg-purple-10 font-orbitron text-center py-2 px-8 flex items-center justify-center font-bold leading-7"
             >
               {item.name}
             </Link>
