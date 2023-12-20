@@ -14,10 +14,8 @@ export default function Home() {
         <div className="w-full lg:w-1/2">
           <div className="grid gap-4">
             <div className="grid">
-              <p className="flex font-orbitron text-4xl md:text-7xl font-bold ">
-                Conte <span className="text-pink-10">meleon</span>
-              </p>
-              <p className="text-xl lg:text-2xl leading-6 mt-4 font-semibold">
+              
+              <p className="text-4xl lg:text-7xl leading-6 mt-4 font-semibold">
                 Your Content Creation Partner.
               </p>
             </div>

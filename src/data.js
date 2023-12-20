@@ -31,7 +31,7 @@ export const navData = [
   {
     key: "create",
     id: 4,
-    name: "Premium",
+    name: "Go Premium",
     link: "/create",
   },
 ];

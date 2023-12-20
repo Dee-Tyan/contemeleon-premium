@@ -50,21 +50,21 @@ export const MobileNav = () => {
 
 export const DesktopNav = () => {
   return (
-    <ul className="hidden space-x-6 md:flex gap-2 py-4 px-6 md:items-center">
+    <ul className="hidden space-x-6 md:flex gap-4 py-4 md:items-center">
       {navData.map((item) => {
         {
           return item.key === "create" ? (
             <Link
               key={item.id}
               href={item.link}
-              className="rounded-md bg-pink-10 hover:bg-purple-10 font-orbitron text-center p-2 flex items-center justify-center font-bold"
+              className="rounded-md bg-pink-10 hover:bg-purple-10 font-orbitron text-center py-2 px-8 flex items-center justify-center font-bold"
             >
               {item.name}
             </Link>
           ) : (
             <div
               key={item.id}
-              className="text-sm hover:text-blue-20 font-orbitron transition cursor-pointer"
+              className="text-sm hover:text-blue-20 font-orbitron transition cursor-pointer font-bold"
             >
               <li key={item.name} className="hover:rounded-md">
                 <Link href={item.link}>{item.name}</Link>
@@ -81,13 +81,16 @@ export const Header = () => {
   return (
     <nav className="flex justify-between py-2 items-center sticky">
       <div className="flex gap-2 justify-center items-center">
-        <Link href="/">
+        <Link href="/" className="flex items-center justify-center gap-2">
           <Image
             alt="Create content"
             loading="lazy"
             className="w-12"
             src={logo}
           />
+          <p className="flex font-orbitron text-3xl font-bold ">
+            Conte <span className="text-pink-10">meleon</span>
+          </p>
         </Link>
       </div>
       <DesktopNav />
