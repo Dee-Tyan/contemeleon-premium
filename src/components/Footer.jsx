@@ -1,54 +1,52 @@
 import React from "react";
 import logo from "@/assets/logo.png";
-import {EmptyProfile} from "@/components/SVGs";
+import ActionButton from "./ActionButton";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-cream dark:bg-gray-900 font-body">
+    <footer className="">
       <div className="container px-6 py-8 mx-auto">
-        <div className="flex flex-col items-center text-center">
-          <a href="#">
-            <img className="w-auto h-16 rounded-full" src={logo} alt="" />
-          </a>
-
-          <p className="max-w-md mx-auto mt-4 text-coalBrown dark:text-coalBrown">
-            convert all your content in a single click.
-          </p>
-
-          <div className="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center">
-            <button className="flex items-center justify-center order-1 w-full px-2 py-2 mt-3 text-sm tracking-wide text-coalBrown capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 border border-coalBrown dark:text-gray-300 sm:mt-0 sm:w-auto focus:outline-none focus:ring-2 dark:hover:bg-buttonBrown focus:ring-coalBrown">
-              <EmptyProfile />
-
-              <span className="mx-1">View Demo</span>
-            </button>
-
-            <button className="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-coalBrown rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-scrollBrown focus:outline-none focus:ring-4 focus:ring-darkBrown">
-              Get started
-            </button>
+        <div className="grid place-items-center">
+          <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-sm text-center">
+              <h2 class="mb-4 text-4xl font-semibold leading-tight">
+                Start your free trial today
+              </h2>
+              <p class="mb-6 font-light text-gray-30 md:text-lg">
+                Try Contemeleon for 30 days. No credit card required.
+              </p>
+              <div className="w-full">
+                <Link
+                  href="/create"
+                  className="rounded-md bg-pink-10 hover:bg-purple-10 text-sm lg:text-lg text-center p-4 w-full h-14 flex items-center justify-center font-orbitron font-semibold"
+                >
+                  Convert Content
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
-        <hr className="my-10 border-coalBrown dark:border-coalBrown" />
+        <hr className="my-10 border-4 border-pink-10 dark:border-pink-10" />
 
         <div className="flex flex-col items-center sm:flex-row sm:justify-between">
-          <p className="text-sm text-coalBrown">
-            © Copyright 2023. All Rights Reserved.
-          </p>
+          <p className="text-sm">© Copyright 2023. All Rights Reserved.</p>
 
           <div className="flex mt-3 -mx-2 sm:mt-0">
             <a
               href="#"
-              className="mx-2 text-sm text-coalBrown transition-colors duration-300 hover:text-scrollBrown dark:hover:text-gray-300"
-              aria-label="Reddit"
+              className="mx-2 text-sm transition-colors duration-300 hover:text-purple-10"
+              aria-label="features"
             >
               {" "}
-              Teams{" "}
+              Features{" "}
             </a>
 
             <a
               href="#"
-              className="mx-2 text-sm text-coalBrown transition-colors duration-300 hover:text-buttonBrown dark:hover:text-gray-300"
-              aria-label="Reddit"
+              className="mx-2 text-sm transition-colors duration-300 hover:text-purple-10"
+              aria-label="privacy"
             >
               {" "}
               Privacy{" "}
@@ -56,8 +54,8 @@ const Footer = () => {
 
             <a
               href="#"
-              className="mx-2 text-sm text-coalBrown transition-colors duration-300 hover:text-buttonBrown dark:hover:text-gray-300"
-              aria-label="Reddit"
+              className="mx-2 text-sm transition-colors duration-300 hover:text-purple-10"
+              aria-label="cookies"
             >
               {" "}
               Cookies{" "}

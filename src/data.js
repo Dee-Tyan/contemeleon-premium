@@ -8,6 +8,7 @@ import twitter from "./assets/twitter.svg";
 import instagram from "./assets/instagram.svg";
 import snapchat from "./assets/snapchat.svg";
 import tiktok from "./assets/tiktok.svg";
+import conversions from "./assets/conversions.png";
 
 export const navData = [
   {
@@ -91,3 +92,27 @@ export const contentTypes = [
     icon: text,
   },
 ];
+
+export const featureBenefits = [
+  {
+    featureTitle: "Effortless Automation",
+    description: "Let AI do the heavy lifting, so you can focus on what matters - creating exceptional content.",
+    imageUrl: conversions, // Replace with an appropriate image URL
+    altText: "Automation Image",
+  },
+  {
+    title: "Multi-Platform Mastery",
+    description: "Conquer LinkedIn, Twitter, IG, TikTok, and YouTube with tailored content for each platform.",
+    imageUrl: conversions, // Replace with an appropriate image URL
+    altText: "Multi-Platform Image",
+    orderLast: true, // To display the image on the right side
+  },
+  {
+    title: "Web 5 Magic",
+    description: "Our integration ensures a smooth onboarding experience and secure access to your content.",
+    imageUrl: conversions, // Replace with an appropriate image URL
+    altText: "Web 5 Magic Image",
+  },
+];
+
+
