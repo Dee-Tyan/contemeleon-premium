@@ -2,7 +2,7 @@ import React from "react";
 
 const SavedPosts = (props) => {
 
-    const convertText = props.conversion_type.toUpperCase()
+    const convertText = props?.conversion_type?.toUpperCase()
   return (
     <div className="grid font-space-mono gap-2 text-gray-10">
       <div className="border-2 text-sm bg-gray-70 p-2 w-64 sm:w-80 h-64 overflow-y-scroll">{props.content}</div>

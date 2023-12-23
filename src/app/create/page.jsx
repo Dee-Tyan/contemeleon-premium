@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { RxCaretDown, RxCaretUp } from "react-icons/rx";
-import { Header } from "../../components/Header";
-import { platforms, contentTypes } from "../../data";
-import magic from "../../assets/magic.svg";
-import arrowDown from "../../assets/arrow-down.svg";
-import arrowUpDown from "../../assets/arrow-up-down.svg";
+import { Header } from "@/components/Header";
+import { platforms, contentTypes } from "@/data";
+import magic from "@/assets/magic.svg";
+import arrowDown from "@/assets/arrow-down.svg";
+import arrowUpDown from "@/assets/arrow-up-down.svg";
 import { platform } from "process";
 import {
   createPostsTemplate,

@@ -33,7 +33,7 @@ export const navData = [
     key: "create",
     id: 4,
     name: "Go Premium",
-    link: "/create",
+    link: "/premium",
   },
 ];
 
@@ -93,6 +93,24 @@ export const contentTypes = [
   },
 ];
 
+
+export const tones = [
+  {
+    name: "Playful",
+  },
+  {
+    name: "Professional",
+  },
+  {
+    name: "Childlike",
+  },
+  {
+    name: "Enthusiastic",
+  },
+  {
+    name: "Authoritative",
+  },
+];
 export const featureBenefits = [
   {
     featureTitle: "Effortless Automation",
