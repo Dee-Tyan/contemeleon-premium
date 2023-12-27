@@ -82,7 +82,7 @@ const createContent = ({}) => {
     <div className="h-screen bg-black text-white overflow-y-scroll">
       <Header />
       <div className="grid sm:grid-rows-2 lg:grid-cols-4 h-3/4 divide-x mt-8">
-        <div className="grid mx-2">
+        <div className="grid mx-4">
           <div className="">
             <textarea
               id="text-box"
@@ -148,11 +148,11 @@ const createContent = ({}) => {
           <div>
             <div className="grid text-white relative">
               <div
-                className="flex justify-between items-center hover:border-blue-20 font-bold cursor-pointer"
+                className="flex justify-between items-center hover:border-blue-20 font-bold cursor-pointer mt-2 lg:mt-4"
                 onClick={() => setShowImportTone(!showImportTone)}
               >
                 {importTone?.name ? (
-                  <div className="flex items-center py-2">
+                  <div className="flex items-center p-2">
                     {importTone?.name}
                   </div>
                 ) : (
@@ -176,7 +176,9 @@ const createContent = ({}) => {
                         setShowImportTone(false);
                         console.log(tone);
                       }}
-                    ></button>
+                    >
+                      {tone.name}
+                    </button>
                   ))}
                 </div>
               )}
