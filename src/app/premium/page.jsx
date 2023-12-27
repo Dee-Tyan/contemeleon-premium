@@ -162,11 +162,11 @@ const createContent = ({}) => {
     }
   };
   return (
-    <div className="h-screen bg-black text-white overflow-y-scroll font-space-mono text-base">
+    <div className="h-screen bg-black text-white overflow-y-scroll text-base">
       <Header />
       {isLoading && <Overlay />}
-      <div className="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-3 grid-rows-1 lg:grid-rows-3 divide-x divide-blue-90">
-        <div className="grid mx-4 lg:mx-8">
+      <div className="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-4 grid-rows-1 lg:grid-rows-4 divide-x divide-blue-90">
+        <div className="grid mx-4">
           <div className="">
             <textarea
               id="text-box"
@@ -253,7 +253,7 @@ const createContent = ({}) => {
                   {tones?.map((tone, index) => (
                     <button
                       key={index}
-                      className="p-4 flex items-center hover:text-pink-10 w-full text-left"
+                      className="p-4 flex items-center hover:text-pink-10 w-full text-left font-bold"
                       role="menuitem"
                       onClick={() => {
                         setImportTone(tone);
@@ -286,8 +286,8 @@ const createContent = ({}) => {
             </div>
           </div>
         </div>
-        <div className="col-span-2">
-          <div className="mx-4 lg:mx-8">
+        <div className="col-span-3">
+          <div className="mx-4">
             <textarea
               id="text-box"
               name="content"
