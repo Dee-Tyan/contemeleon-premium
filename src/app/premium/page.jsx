@@ -81,14 +81,14 @@ const createContent = ({}) => {
   return (
     <div className="h-screen bg-black text-white overflow-y-scroll">
       <Header />
-      <div className="grid sm:grid-rows-2 lg:grid-cols-4 h-3/4 divide-x mt-8">
+      <div className="grid sm:grid-rows-2 lg:grid-cols-4 h-full divide-x">
         <div className="grid mx-4">
           <div className="">
             <textarea
               id="text-box"
               name="content"
               placeholder="Paste your content or enter prompt"
-              className="w-full h-52 p-3 mt-1 resize-none bg-blue-90 rounded focus:outline-none overflow-y-scroll"
+              className="w-full h-52 lg:h-96 p-3 mt-1 resize-none bg-blue-90 rounded focus:outline-none overflow-y-scroll"
               onChange={(e) => setTextContent(e.target.value)}
             />
 
@@ -202,7 +202,35 @@ const createContent = ({}) => {
             </div>
           </div>
         </div>
-        <div className="hidden lg:col-span-3">col 2</div>
+        <div className="lg:col-span-3">
+          <div className="mx-4">
+            <textarea
+              id="text-box"
+              name="content"
+              placeholder="Rendered content"
+              className="w-full h-64 p-3 mt-1 resize-none bg-blue-90 focus:outline-none rounded-md"
+              value={renderedContent}
+              readOnly
+            />
+            <div className="relative">
+              <div className="px-4 py-6">
+                <div className="flex gap-4 justify-end font-normal text-sm pt-2">
+                  <button
+                    className="p-4 font-bold border border-gray-10 hover:text-blue-10 rounded"
+                    onClick={() => copyToClipboard(renderedContent)}
+                  >
+                    Copy content 🧙🏻‍♂️
+                  </button>
+                  {showCopyTooltip && (
+                    <div className="absolute w-56 py-[6px] px-3 z-10 -mt-12 bg-gray-70 border border-gray-30 text-xs text-blue-10 text-center whitespace-nowrap shadow-lg">
+                      {clipboardTooltip}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
