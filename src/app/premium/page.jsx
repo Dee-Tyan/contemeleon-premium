@@ -79,16 +79,16 @@ const createContent = ({}) => {
     }
   };
   return (
-    <div className="h-screen bg-black text-white overflow-y-scroll">
+    <div className="h-screen bg-black text-white overflow-y-scroll font-space-mono text-base">
       <Header />
-      <div className="grid sm:grid-rows-2 lg:grid-cols-4 h-full divide-x">
-        <div className="grid mx-4">
+      <div className="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-3 grid-rows-1 lg:grid-rows-3 divide-x divide-blue-90">
+        <div className="grid mx-4 lg:mx-8">
           <div className="">
             <textarea
               id="text-box"
               name="content"
               placeholder="Paste your content or enter prompt"
-              className="w-full h-52 lg:h-96 p-3 mt-1 resize-none bg-blue-90 rounded focus:outline-none overflow-y-scroll"
+              className="w-full h-52 lg:h-80 p-3 mt-1 resize-none bg-blue-90 rounded focus:outline-none overflow-y-scroll"
               onChange={(e) => setTextContent(e.target.value)}
             />
 
@@ -202,13 +202,13 @@ const createContent = ({}) => {
             </div>
           </div>
         </div>
-        <div className="lg:col-span-3">
-          <div className="mx-4">
+        <div className="col-span-2">
+          <div className="mx-4 lg:mx-8">
             <textarea
               id="text-box"
               name="content"
               placeholder="Rendered content"
-              className="w-full h-64 p-3 mt-1 resize-none bg-blue-90 focus:outline-none rounded-md"
+              className="w-full h-64 p-3 mt-1 resize-none bg-blue-90 focus:outline-none rounded-md overflow-y-scroll"
               value={renderedContent}
               readOnly
             />
