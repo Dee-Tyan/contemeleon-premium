@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
+import profile from "@/assets/profile2.svg";
 
 const Header = () => {
   return (
@@ -29,7 +30,14 @@ const Header = () => {
           src={logo}
         />
       </Link>
-      <div className="flex gap-2 justify-center items-center">menu tab</div>
+      <div className="flex gap-2 justify-center items-center">
+        <button><Image
+          alt="profile"
+          loading="lazy"
+          className="w-12"
+          src={profile}
+        /></button>
+      </div>
     </div>
   );
 };
