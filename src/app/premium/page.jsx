@@ -78,9 +78,93 @@ const createContent = ({}) => {
       }
     }
   };
+  useEffect(() => {
+    const saveContent = async () => {
+      console.log("saving your data");
+      try {
+        const generatedPostsProtocol = contemeleonProtocolDefinition();
+        const generatedContent = createPostsTemplate(
+          userDid,
+          renderedContent,
+          importPlatform.value
+        );
+
+        const { record, status } = await web5.dwn.records.write({
+          data: generatedContent,
+          message: {
+            protocol: generatedPostsProtocol.protocol,
+            protocolPath: "generatedPosts",
+            schema: generatedPostsProtocol.types.generatedPosts.schema,
+            recipient: userDid,
+          },
+        });
+        if (status.code === 200) {
+          console.log("sent this", JSON.stringify(generatedContent));
+          return { ...generatedContent, recordId: record.id };
+        }
+
+        if (status.code === 202) {
+          console.log("your request is processing...");
+          return [];
+        }
+
+        console.error("Error saving content:", status.code);
+        return record;
+      } catch (error) {
+        console.error("Error saving content", error);
+      }
+    };
+
+    if (renderedContent) {
+      saveContent();
+    }
+  }, [renderedContent]);
+
+  async function aiConvertContent(textContent) {
+    setIsLoading(true);
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        messages: [
+          {
+            role: "user",
+            content: `Convert ${textContent} to a ${importPlatform.name}, make it sound ${!importTone.name ? 'catchy' : importTone.name}`,
+          },
+        ],
+        temperature: 0.7,
+      }),
+    });
+
+    const text = await response.text();
+    const convertedText = JSON.parse(text);
+    setRenderedContent(convertedText.choices[0].message.content);
+    console.log(convertedText.choices[0].message.content);
+    setIsLoading(false);
+  }
+
+  const copyToClipboard = (value) => {
+    setShowCopyTooltip(true);
+    value
+      ? setClipboardTooltip("Content copied to clipboard")
+      : setClipboardTooltip("No rendered content to copy");
+    setTimeout(() => {
+      setShowCopyTooltip(false);
+    }, 4000);
+    if (value) {
+      navigator.clipboard.writeText(value).catch((error) => {
+        console.error("Failed to copy to clipboard:", error);
+      });
+    }
+  };
   return (
     <div className="h-screen bg-black text-white overflow-y-scroll font-space-mono text-base">
       <Header />
+      {isLoading && <Overlay />}
       <div className="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-3 grid-rows-1 lg:grid-rows-3 divide-x divide-blue-90">
         <div className="grid mx-4 lg:mx-8">
           <div className="">
