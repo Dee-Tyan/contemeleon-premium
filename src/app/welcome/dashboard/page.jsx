@@ -83,7 +83,7 @@ const Dashboard = () => {
           <div>
             <div className="flex space-x-4 lg:space-x-10">
               <Link
-                href="/create"
+                href="/premium"
                 className="basis-1/2 font-bold p-2 md:p-4 lg:px-8 lg:py-4 bg-gradient-to-r from-blue-10 from-2.6% via-purple-10 via-27.63% to-pink-30 to-92.36% hover:from-purple-10 from-92.36% hover:via-pink-30 via-27.63% hover:to-blue-10 to-2.6% text-center flex items-center justify-center flex items-center justify-center text-xs md:text-base"
               >
                 Create content

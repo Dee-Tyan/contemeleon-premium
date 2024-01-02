@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="font-orbitron">
+    <footer className="">
       <div className="container px-6 py-8 mx-auto">
         <div className="grid place-items-center">
           <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -26,13 +26,13 @@ const Footer = () => {
               <h2 class="my-4 text-2xl md:text-4xl font-semibold leading-tight mx-4">
                 Start your free trial today
               </h2>
-              <p class="mb-6 font-light font-space-mono text-gray-30 text-sm">
+              <p class="mb-6 font-light text-gray-30 text-sm">
                 Try Contemeleon for 30 days. No credit card required.
               </p>
               <div className="w-full">
                 <Link
-                  href="/create"
-                  className="rounded-md bg-pink-10 hover:bg-purple-10 text-sm lg:text-lg text-center p-4 w-full h-14 flex items-center justify-center font-orbitron font-semibold"
+                  href="/premium"
+                  className="rounded-md bg-pink-10 hover:bg-purple-10 text-sm lg:text-lg text-center p-4 w-full h-14 flex items-center justify-center font-semibold"
                 >
                   Convert Content
                 </Link>
@@ -43,7 +43,7 @@ const Footer = () => {
 
         <hr className="my-10 border-4 border-pink-10 dark:border-pink-10 " />
 
-        <div className="flex flex-col items-center sm:flex-row sm:justify-between font-space-mono">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-between">
           <p className="text-sm">© Copyright 2023. All Rights Reserved.</p>
 
           <div className="flex mt-3 -mx-2 sm:mt-0">

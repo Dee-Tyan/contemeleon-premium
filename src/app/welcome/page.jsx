@@ -11,7 +11,7 @@ const Welcome = () => {
          </p>
        </div>
        <div className='bg-gray-30 bg-opacity-30 px-8 py-4 text-white flex items-center justify-center text-xs md:text-base'>
-         <Link href='/create' className=''>
+         <Link href='/premium' className=''>
            Convert My Content
          </Link>
        </div>

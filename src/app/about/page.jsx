@@ -48,7 +48,7 @@ const About = () => {
           </div>
         </div>
         <Link
-          href="/create"
+          href="/premium"
           className="w-64 bg-gradient-to-r from-blue-10 from-2.6% via-purple-10 via-27.63% to-pink-30 to-92.36% hover:from-purple-10 from-92.36% hover:via-pink-30 via-27.63% hover:to-blue-10 to-2.6% text-center px-4 h-14 flex items-center justify-center font-bold"
         >
           Get Started 🪄

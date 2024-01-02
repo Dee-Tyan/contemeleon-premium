@@ -57,14 +57,14 @@ export const DesktopNav = () => {
             <Link
               key={item.id}
               href={item.link}
-              className="rounded-md bg-pink-10 hover:bg-purple-10 font-orbitron text-center py-2 px-8 flex items-center justify-center font-bold leading-7"
+              className="rounded-md bg-pink-10 hover:bg-purple-10 text-center py-2 px-8 flex items-center justify-center font-bold leading-7"
             >
               {item.name}
             </Link>
           ) : (
             <div
               key={item.id}
-              className="text-sm hover:text-blue-20 font-orbitron transition cursor-pointer font-bold"
+              className="text-sm hover:text-blue-20 transition cursor-pointer font-bold"
             >
               <li key={item.name} className="hover:rounded-md">
                 <Link href={item.link}>{item.name}</Link>

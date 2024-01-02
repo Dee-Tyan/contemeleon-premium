@@ -11,7 +11,7 @@ import FeatureSection from "@/components/FeatureSection";
 
 export default function Home() {
   return (
-    <main className="text-gray-10 bg-black px-4 font-obitron lg:px-8">
+    <main className="text-gray-10 bg-black px-4 lg:px-8">
       <Header />
 
       <section className="grid lg:flex lg:justify-between lg:items-center lg:m-8">

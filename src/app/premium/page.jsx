@@ -165,7 +165,7 @@ const createContent = ({}) => {
     <div className="h-screen bg-black text-white overflow-y-scroll text-base">
       <Header />
       {isLoading && <Overlay />}
-      <div className="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-4 grid-rows-1 lg:grid-rows-4 divide-x divide-blue-90">
+      <div className="grid grid-flow-row-dense grid-cols-1 lg:grid-cols-4 grid-rows-1 divide-x divide-blue-90">
         <div className="grid mx-4">
           <div className="">
             <textarea
