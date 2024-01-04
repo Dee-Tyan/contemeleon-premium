@@ -64,9 +64,8 @@ const Dashboard = () => {
       <Header />
       <div className="grid grid-rows-1 lg:grid-cols-4 m-6 md:mt-14 px-4 md:px-0 gap-8">
         <div className="hidden lg:block">
-        <div className="w-64 bg-pink-10 px-4 h-14 flex items-center cursor-pointer rounded font-bold">
-            
-           View Conversions
+          <div className="w-64 bg-pink-10 px-4 h-14 flex items-center cursor-pointer rounded font-bold">
+            View Conversions
           </div>
           {contentTypes?.map((type) => (
             <div key={type?.value} className="py-8 flex items-center">
@@ -110,11 +109,11 @@ const Dashboard = () => {
             ) : (
               <div className="grid place-items-center mt-8 lg:mt-16 gap-8">
                 <Image
-                alt={'logo'}
-                loading="lazy"
-                className="w-48"
-                src={logo}
-              />
+                  alt={"logo"}
+                  loading="lazy"
+                  className="w-48"
+                  src={logo}
+                />
 
                 <div className="grid gap-2">
                   <p className="text-center uppercase font-bold text-sm lg:text-xl">
@@ -122,8 +121,11 @@ const Dashboard = () => {
                   </p>
                   <div className="mx-2 lg:mx-4">
                     <p className="text-xs lg:text-lg text-center">
-                      Go ahead and create content, your conversions will appear
-                      here
+                      Go ahead and{" "}
+                      <Link href="/premium" className="text-pink-10 font-bold">
+                        create content
+                      </Link>
+                      , your conversions will appear here
                     </p>
                   </div>
                 </div>
