@@ -76,7 +76,7 @@ const Dashboard = () => {
                 className="w-6 h-6 mr-4 cursor-pointer text-pink-10"
                 src={type?.icon}
               />
-              <div className="hover:text-purple-10 cursor-pointer">
+              <div className="hover:text-pink-10 cursor-pointer font-bold">
                 {type?.name}
               </div>
             </div>
