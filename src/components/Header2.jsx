@@ -41,7 +41,7 @@ const Header = () => {
           <Image alt="profile" loading="lazy" className="w-12 " src={profile} />
         </button>
         {show && (
-          <div className="absolute right-0 bottom-0 w-36 bg-blue-90 text-white filter contrast-100 shadow-md rounded drop-shadow-md bg-brightness-50">
+          <div className="absolute right-0 bottom-0 w-36 bg-pink-10 text-white filter contrast-100 shadow-md rounded drop-shadow-md bg-brightness-50">
             <ul>
               <li className="">
                 {" "}

@@ -66,17 +66,17 @@ const Dashboard = () => {
         <div className="hidden lg:block">
         <div className="w-64 bg-pink-10 px-4 h-14 flex items-center cursor-pointer rounded font-bold">
             
-            Conversion Types
+           View Conversions
           </div>
           {contentTypes?.map((type) => (
             <div key={type?.value} className="py-8 flex items-center">
               <Image
                 alt={type?.name}
                 loading="lazy"
-                className="w-6 h-6 mr-4 cursor-pointer"
+                className="w-6 h-6 mr-4 cursor-pointer text-pink-10"
                 src={type?.icon}
               />
-              <div className="hover:text-blue-10 cursor-pointer">
+              <div className="hover:text-purple-10 cursor-pointer">
                 {type?.name}
               </div>
             </div>
@@ -87,20 +87,20 @@ const Dashboard = () => {
             {/* <p className='text-sm lg:text-xl'>You should not be here yet, but go ahead and create content </p> */}
           </div>
           <div>
-            <div className="flex space-x-4 lg:space-x-10">
+            {/* <div className="flex space-x-4 lg:space-x-10">
               <Link
                 href="/premium"
-                className="basis-1/2 font-bold p-2 md:p-4 lg:px-8 rounded-md lg:py-4 bg-gradient-to-r from-blue-10 from-2.6% via-purple-10 via-27.63% to-pink-10 to-92.36% hover:from-purple-10 from-92.36% hover:via-pink-30 via-27.63% hover:to-blue-10 to-2.6% text-center flex items-center justify-center flex items-center justify-center text-xs md:text-base"
+                className="basis-1/2 font-bold bg-white p-2 md:p-4 lg:px-8 rounded-md lg:py-4 bg-blue-90 hover:via-pink-30 via-27.63% hover:to-blue-10 to-2.6% text-center flex items-center justify-center flex items-center justify-center text-xs md:text-base"
               >
                 Create content
               </Link>
               <button
                 disabled
-                className="basis-1/2 font-bold  bg-[#C9D1E4] rounded-md bg-opacity-30 p-2 md:p-4 lg:px-8 lg:py-4 text-white flex items-center justify-center text-xs md:text-base"
+                className="basis-1/2 font-bold bg-white rounded-md p-2 md:p-4 lg:px-8 lg:py-4 text-blue-90 flex items-center justify-center text-xs md:text-base"
               >
                 Import Content
               </button>
-            </div>
+            </div> */}
             {savedPosts.length >= 1 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 place-items-center my-4 gap-4">
                 {savedPosts?.map((posts, index) => (
