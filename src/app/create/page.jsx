@@ -165,7 +165,7 @@ const CreateContent = () => {
     <>
       {isLoading && <Overlay />}
       <main className="flex min-h-screen flex-col items-center bg-blue-90 text-gray-10 font-space-mono">
-        <Header />
+        {/* <Header /> */}
 
         <div className="container flex gap-28 mt-6 md:mt-24 px-4 md:px-0">
           <div className="hidden lg:block">
