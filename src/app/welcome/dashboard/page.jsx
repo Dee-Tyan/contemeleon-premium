@@ -112,7 +112,7 @@ const Dashboard = () => {
                 <Image
                 alt={'logo'}
                 loading="lazy"
-                className=""
+                className="w-48"
                 src={logo}
               />
 
