@@ -1,9 +1,10 @@
 "use client";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header2";
 import { EmptyProfile } from "@/components/SVGs";
 import profile from "@/assets/profile.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { platforms, contentTypes } from "@/data";
 import { useState, useEffect } from "react";
 import SavedPosts from "@/components/SavedPosts";
 import { useWeb5 } from "../../Web5Context";
@@ -59,38 +60,43 @@ const Dashboard = () => {
   }, [web5, userDid]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-blue-90 text-gray-10">
+    <main className=" min-h-screen bg-blue-90 text-gray-10">
       <Header />
-      <div className="container flex gap-28 mt-6 md:mt-24 px-4 md:px-0">
+      <div className="grid grid-rows-1 lg:grid-cols-4 m-6 md:mt-14 px-4 md:px-0 gap-8">
         <div className="hidden lg:block">
-          <div className="w-64 bg-gray-70 px-4 h-14 flex items-center cursor-pointer">
-            <Image
-              alt="Create content"
-              loading="lazy"
-              className="w-6 h-6 mr-2"
-              src={profile}
-            />
-            Create content
+        <div className="w-64 bg-pink-10 px-4 h-14 flex items-center cursor-pointer rounded font-bold">
+            
+            Conversion Types
           </div>
+          {contentTypes?.map((type) => (
+            <div key={type?.value} className="py-8 flex items-center">
+              <Image
+                alt={type?.name}
+                loading="lazy"
+                className="w-6 h-6 mr-4 cursor-pointer"
+                src={type?.icon}
+              />
+              <div className="hover:text-blue-10 cursor-pointer">
+                {type?.name}
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="grid gap-12 w-full lg:w-[732px] md:m-4">
+        <div className="grid w-full lg:col-span-3">
           <div className="grid gap-4">
-            <p className="text-2xl md:text-6xl font-bold leading-6 font-space-mono">
-              Hello 👋🏼
-            </p>
             {/* <p className='text-sm lg:text-xl'>You should not be here yet, but go ahead and create content </p> */}
           </div>
           <div>
             <div className="flex space-x-4 lg:space-x-10">
               <Link
                 href="/premium"
-                className="basis-1/2 font-bold p-2 md:p-4 lg:px-8 lg:py-4 bg-gradient-to-r from-blue-10 from-2.6% via-purple-10 via-27.63% to-pink-30 to-92.36% hover:from-purple-10 from-92.36% hover:via-pink-30 via-27.63% hover:to-blue-10 to-2.6% text-center flex items-center justify-center flex items-center justify-center text-xs md:text-base"
+                className="basis-1/2 font-bold p-2 md:p-4 lg:px-8 rounded-md lg:py-4 bg-gradient-to-r from-blue-10 from-2.6% via-purple-10 via-27.63% to-pink-10 to-92.36% hover:from-purple-10 from-92.36% hover:via-pink-30 via-27.63% hover:to-blue-10 to-2.6% text-center flex items-center justify-center flex items-center justify-center text-xs md:text-base"
               >
                 Create content
               </Link>
               <button
                 disabled
-                className="basis-1/2 font-bold  bg-[#C9D1E4] bg-opacity-30 p-2 md:p-4 lg:px-8 lg:py-4 text-white flex items-center justify-center text-xs md:text-base"
+                className="basis-1/2 font-bold  bg-[#C9D1E4] rounded-md bg-opacity-30 p-2 md:p-4 lg:px-8 lg:py-4 text-white flex items-center justify-center text-xs md:text-base"
               >
                 Import Content
               </button>
