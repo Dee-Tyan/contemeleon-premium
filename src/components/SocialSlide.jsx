@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const SocialSlide = () => {
   return (
-    <div className="flex items-center justify-around mx-16 py-4 font-space-mono leading-7">
+    <div className="flex items-center justify-around mx-16 py-4 leading-7">
       {platforms?.map((type) => (
         <div key={type?.value} className="flex gap-4 items-center">
-          <div className="hidden md:flex hover:text-purple-10 cursor-pointer w-full animate-slide text-white font-semibold">
+          <div className="hidden md:flex hover:text-pink-10 cursor-pointer w-full animate-slide text-white font-semibold">
             {type?.name}
           </div>
         </div>

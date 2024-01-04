@@ -9,7 +9,7 @@ const Templates = () => {
       
       <p className="font-orbitron text-4xl md:text-7xl font-bold">
         Coming{" "}
-        <span className="text-pink-30 relative">
+        <span className="text-pink-10 relative">
           Soon
         </span>
       </p>

@@ -2,6 +2,7 @@
 import { BackArrow } from "@/components/SVGs";
 import Link from "next/link";
 
+
 const Features = () => {
   return (
     <main className="flex h-screen flex-col items-center justify-center bg-blue-90 text-gray-10 bg-auto bg-no-repeat font-space-mono p-4">
@@ -9,7 +10,7 @@ const Features = () => {
         
         <p className="font-orbitron text-4xl md:text-7xl font-bold">
           Coming{" "}
-          <span className="text-pink-30 relative">
+          <span className="text-pink-10 relative">
             Soon
           </span>
         </p>

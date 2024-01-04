@@ -8,7 +8,9 @@ import twitter from "./assets/twitter.svg";
 import instagram from "./assets/instagram.svg";
 import snapchat from "./assets/snapchat.svg";
 import tiktok from "./assets/tiktok.svg";
-import conversions from "./assets/conversions.png";
+import conversions from "./assets/convertc.png";
+import view from "./assets/viewc.png";
+import startc from "./assets/startc.png";
 
 export const navData = [
   {
@@ -32,7 +34,7 @@ export const navData = [
   {
     key: "create",
     id: 4,
-    name: "Go Premium",
+    name: "Convert Content",
     link: "/premium",
   },
 ];
@@ -115,7 +117,7 @@ export const featureBenefits = [
   {
     featureTitle: "Effortless Automation",
     description: "Copy an existing content and type the social media platform you would like to tailor your content into.",
-    imageUrl: conversions, 
+    imageUrl: startc, 
     altText: "Automation Image",
   },
   {
@@ -128,7 +130,7 @@ export const featureBenefits = [
   {
     title: "Web 5 Magic",
     description: "No need to sign up! Our integration ensures a smooth onboarding experience and secure access to all your previously generated content.",
-    imageUrl: conversions, 
+    imageUrl: view, 
     altText: "Web 5 Magic Image",
   },
 ];

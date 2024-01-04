@@ -1,7 +1,7 @@
 "use client";
 import Header from "@/components/Header2";
 import { EmptyProfile } from "@/components/SVGs";
-import profile from "@/assets/profile.svg";
+import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { platforms, contentTypes } from "@/data";
@@ -109,7 +109,12 @@ const Dashboard = () => {
               </div>
             ) : (
               <div className="grid place-items-center mt-8 lg:mt-16 gap-8">
-                <EmptyProfile />
+                <Image
+                alt={'logo'}
+                loading="lazy"
+                className=""
+                src={logo}
+              />
 
                 <div className="grid gap-2">
                   <p className="text-center uppercase font-bold text-sm lg:text-xl">
