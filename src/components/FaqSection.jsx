@@ -25,7 +25,7 @@ const FaqSection = () => {
 
                 <span className={`rounded-full ${item.buttonColor} text-white`}>
                   <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 ${showAnswers[index] ? 'minus-icon' : 'plus-icon'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d={showAnswers[index] ? "M5 12h14" : "M12 6v6m0 0v6m0-6h6m-6 0H6"} />
+                    <path strokeLinecap="round" stroke-linejoin="round" d={showAnswers[index] ? "M5 12h14" : "M12 6v6m0 0v6m0-6h6m-6 0H6"} />
                   </svg>
                 </span>
               </button>

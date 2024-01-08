@@ -27,7 +27,7 @@ const Footer = () => {
                 Start your free trial today
               </h2>
               <p class="mb-6 font-light text-gray-30 text-sm">
-                Try Contemeleon to build your audience. No credit card required.
+                Try Contemeleon to build your audience. No sign in required.
               </p>
               <div className="w-full">
                 <Link
