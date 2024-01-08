@@ -86,19 +86,8 @@ const faqItems = [
       "We take security seriously. Contemeleon employs robust measures to ensure the safety of your content. Our integration with Web5 technology not only enhances functionality but also prioritizes the security of your data.",
     buttonColor: "border-white",
   },
-  {
-    question: "How can I get started with Contemeleon?",
-    answer:
-      "Getting started is easy! Simply sign up on our platform, follow the intuitive onboarding process, and start transforming your content. Our user-friendly interface ensures a smooth experience for creators of all levels.",
-    buttonColor: "border-white",
-  },
-  {
-    question:
-      "What support options are available if I have questions or issues?",
-    answer:
-      "We're here for you! Contemeleon offers dedicated customer support to assist you with any questions or issues. Reach out to us via our support email, and our team will promptly address your concerns.",
-    buttonColor: "border-white",
-  },
+
+ 
 ];
 
 export default FaqSection;

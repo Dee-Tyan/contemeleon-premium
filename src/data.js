@@ -122,7 +122,7 @@ export const featureBenefits = [
   },
   {
     title: "Multi-Platform Mastery",
-    description: "Copy the newly generated text and upload to your favorite social media platform! Conquer LinkedIn, Twitter, IG, TikTok, and YouTube algorithm with tailored content for each platform.",
+    description: "Copy the newly generated text and upload to your favorite social media platform!",
     imageUrl: conversions, 
     altText: "Multi-Platform Image",
     orderLast: true, // To display the image on the right side
