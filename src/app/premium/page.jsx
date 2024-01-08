@@ -17,8 +17,10 @@ import {
 import Overlay from "@/components/Overlay";
 import Header from "@/components/Header2";
 import SavedPosts from "@/components/SavedPosts";
+import { useWeb5 } from "../Web5Context";
 
 const createContent = ({}) => {
+  const {web5, userDid} = useWeb5()
   const [showImportMenu, setShowImportMenu] = useState(false);
   const [importPlatform, setImportPlatform] = useState({
     name: "",
@@ -35,6 +37,8 @@ const createContent = ({}) => {
   const [showCopyTooltip, setShowCopyTooltip] = useState(false);
   const [clipboardTooltip, setClipboardTooltip] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const MAX_REQUESTS_PER_DAY = 5;
+  const SESSION_LIMIT_KEY = 'apiRequestsToday';
 
   const importMenu = useRef(null);
 
@@ -119,8 +123,58 @@ const createContent = ({}) => {
       saveContent();
     }
   }, [renderedContent]);
-
+  
   async function aiConvertContent(textContent) {
+    // Check if the user has exceeded the session limit
+    const requestsToday = parseInt(localStorage.getItem(SESSION_LIMIT_KEY) || '0', 10);
+    if (requestsToday >= MAX_REQUESTS_PER_DAY) {
+      // Display a browser notification or popup
+      alert("You've reached the daily limit for Conversions. Please try again tomorrow.");
+      return;
+    }
+  
+    setIsLoading(true);
+  
+    try {
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [
+            {
+              role: "user",
+              content: `Convert ${textContent} to a ${importPlatform.name}, make it sound ${!importTone.name ? 'catchy' : importTone.name}`,
+            },
+          ],
+          temperature: 0.7,
+        }),
+      });
+  
+      // Increment the request count for the current session
+      localStorage.setItem(SESSION_LIMIT_KEY, requestsToday + 1);
+
+    const text = await response.text();
+    const convertedText = JSON.parse(text);
+    setRenderedContent(convertedText.choices[0].message.content);
+    console.log(convertedText.choices[0].message.content);
+  
+    } catch (error) {
+      // Handle errors appropriately
+      console.error("API request failed:", error);
+  
+    } finally {
+      setIsLoading(false);
+    }
+  }
+  
+
+
+
+  async function aiConvertContent2(textContent) {
     setIsLoading(true);
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -146,6 +200,9 @@ const createContent = ({}) => {
     console.log(convertedText.choices[0].message.content);
     setIsLoading(false);
   }
+
+
+ 
 
   const copyToClipboard = (value) => {
     setShowCopyTooltip(true);

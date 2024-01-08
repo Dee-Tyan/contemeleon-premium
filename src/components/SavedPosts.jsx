@@ -11,7 +11,7 @@ const SavedPosts = (props) => {
           {convertText} post conversion
         </span>
         <span className="text-sm font-bold font-space-mono bg-transparent">
-          Last edited on {props.currentDate} at {props.currentTime}
+          Created {props.currentDate} at {props.currentTime}
         </span>
       </div>
     </div>
